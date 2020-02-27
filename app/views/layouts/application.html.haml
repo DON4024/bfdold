@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bfd
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    .side-bar
+      .side-bar__appri-name
+        .upper-name
+          BFD
+        .lower-name
+          Best Fancy Dresser!!
+      .side-bar__group-list
+        -# - current_user.groups.each do |group|
+        -#   .group-items
+        -#     = link_to  group_messages_path(group), class: "group-link" do
+        -#       .group-items__name
+        -#         = group.name
+        -#       .group-items__message
+        -#         = group.show_last_message
+
+
+
+  %body
+    = yield
+
