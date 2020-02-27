@@ -1,41 +1,49 @@
-.chat-main {
+.app-main {
   @include box-prop (calc(100vw - 300px), 100vh, $color-fafafa);
   float: left;
   display: block;
-  position: relative;
-  &__group-info{
-    @include box-prop (100%, 100px, $color-fff);
-    border-bottom: #eeeeee;
-    .info-items {
-      @include flex_between(flex, space-between);
-      margin: 0 40px 0 40px;
-      &__name-items {
-        margin-top: 35px;
-        &__group-name {
-          font-size: 20px;
-          color: #333333;
-          margin-bottom: 15px;
-        }
-        &__member-name {
-          font-size: 12px;
-          color: #999999;
-        }
-      }
-      &__btn{
-        width: 72px;
-        height: 40px;
-        margin-top: 28px;
-        padding: 0 20px 0 20px;
+  &__header{
+    &__message {
+      height: 50px;
+      @include flex_between(flex, space-around);
+      .list1 {
+        width: 30%;
+        color: red;
         text-align: center;
-        line-height: 40px;
-        border: solid $color-38aef0 1px;
-        .edit {
-          @include font-prop ($font-16, $color-38aef0, normal);
-          text-decoration: none;
-        }
+        padding-top: 20px;
+      }
+      .list2 {
+        @extend .list1;
+      }
+      .list3 {
+        @extend .list1;
+      }
+    }
+    &__items{
+      @include box-prop (100%, 300px, $color-fff);
+      border-bottom: #eeeeee;
+      box-shadow:  0 -10px 10px  rgba(rgb(14, 88, 185),0.2)inset;
+      @include flex_between(flex, space-around);
+      .right-items {
+        width: 30%;
+        border: 1px,solid, red; 
+        @import "header-items"
+        
+      }
+      .center-items {
+        @extend .right-items;
+        @import "header-items"
+      }
+      .left-items {
+        @extend .right-items;
+        @import "header-items"
       }
     }
   }
+      
+      
+    
+  
   &__message-list{
     overflow: scroll;
     @include box-prop (100%, calc(100vh - 190px), $color-fafafa);

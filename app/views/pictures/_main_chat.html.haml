@@ -1,16 +1,31 @@
-.chat-main
-  .chat-main__group-info
-    .info-items
-      .info-items__name-items
-        .info-items__name-items__group-name
-          name
-        .info-items__name-items__member-name
-          = "member "
+.app-main
+  .app-main__header
+    .app-main__header__message
+      .list1
+        総合１位　
+      .list2
+        部門別１位
+      .list3
+        部門別１位
+    .app-main__header__items
+      .right-items
+        .right-items__image
+          image1
+        .right-items__nickname
+          name1
+      .center-items
+        .center-items__image
+          image2
+        .center-items__nickname
+          name2
+      .left-items
+        .left-items__image
+          image3
+        .left-items__nickname
+          name3
           
-      .info-items__btn
-        -# = link_to edit_group_path(@group.id), class: "edit" do
-          Edit
-  .chat-main__message-list
+      
+  .app-main__message-list
     
 
 
