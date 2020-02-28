@@ -23,17 +23,38 @@
           image3
         .left-items__nickname
           name3
-          
-      
-  .app-main__message-list
-    
 
 
-  .chat-main__message-form
-    -# = form_for  [@group, @message] do |f|
-    -#   .input-box
-    -#     = f.text_field :content, class: 'message-box', placeholder: 'type a message' 
-    -#     = f.label :image, class: 'a' do
-    -#       = icon('fas', 'image', class: 'input-box__image')
-    -#       = f.file_field :image, class: 'input-box__image__file'
-    -#   = f.submit 'Send', class: 'submit-btn'
+  .app-main__body
+    .app-main__body__group
+      .picture-image
+        image1
+      .review-group
+        .picture-name
+          name1
+        .review-items
+          .review-items__icons
+            .review-items__icons__left
+            .review-items__icons__center
+            .review-items__icons__right
+          .review-items__comments
+            .comments-box
+              コメントをどうぞ
+            -# = form_for
+  .app-main__body
+    .app-main__body__group
+      .picture-image
+        image1
+      .review-group
+        .picture-name
+          name1
+        .review-items
+          .review-items__icons
+            .review-items__icons__left
+            .review-items__icons__center
+            .review-items__icons__right
+          .review-items__comments
+            .comments-box
+              コメントをどうぞ
+            -# = form_for
+
