@@ -2,21 +2,28 @@
   @include box-prop (180px, 100vh, oldlace);
   float: left;
   &__appri-name {
-    height: 120px;
-    background-color: skyblue;
+    // height: 120px;
+    // background-color: skyblue;
     border-radius: 40px;
-    margin: 3px;
-    .upper-name {
-      font-size: 60px;
-      color: yellow;
-      width: 100%;
-      text-align: center;
-    }
-    .lower-name {
-      font-size: 12px;
-      color: white;
-      text-align: center;
-    }
+    margin: 15px;
+    background-image: url('bfd-logo.png');
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: contain; //width, heightと同じになる
+    background-repeat: no-repeat;
+    
+    // .upper-name {
+    //   font-size: 60px;
+    //   color: yellow;
+    //   width: 100%;
+    //   text-align: center;
+    // }
+    // .lower-name {
+    //   font-size: 12px;
+    //   color: white;
+    //   text-align: center;
+    // }
     
   }
   &__group-list {
