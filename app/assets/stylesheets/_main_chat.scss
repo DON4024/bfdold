@@ -1,9 +1,12 @@
 .app-main {
-  @include box-prop (calc(100vw - 300px), 100vh, none);
+  @include box-prop (calc(100vw - 360px), 100vh, none);
   float: left;
   display: block;
   overflow: scroll;
+  padding: 0 3px;
   &__header{
+    border-top: double 7px rgb(185, 14, 43);
+    border-bottom: double 7px rgb(185, 14, 43);
     &__message {
       height: 50px;
       @include flex_between(flex, space-around);
@@ -22,12 +25,10 @@
     }
     &__items{
       @include box-prop (100%, 300px, $color-fff);
-      border-bottom: #eeeeee;
-      box-shadow:  0 -10px 10px  rgba(rgb(14, 88, 185),0.2)inset;
       @include flex_between(flex, space-around);
       .right-items {
         width: 30%;
-        border: 1px,solid, red; 
+        box-shadow:  0 -10px 10px  rgba(rgb(185, 14, 43),0.2);
         @import "header-items"
       }
       .center-items {
@@ -44,21 +45,22 @@
   
   &__body {
     &__group {
-      @include box-prop (700px, 300px, none);
+      @include box-prop (100%, 300px, none);
+      box-shadow:  0 -10px 10px  rgba(rgb(14, 88, 185),0.2)inset;
       margin: 0 auto;
       display: flex;
       margin-top: 30px;
       .picture-image {
-        @include box-prop (400px, 300px, blue);
+        @include box-prop (400px, 300px, none);
       }
       .review-group {
         @include box-prop (300px, 300px,none);
         .picture-name {
-          @include box-prop (300px, 50px, red);
+          @include box-prop (300px, 50px, none);
         }
         .review-items{
           height: calc(100%-50px);
-          @include box-prop (100%, 250px, orange);
+          @include box-prop (100%, 250px, none);
           &__icons{
             display: flex;
             justify-content: space-around;
