@@ -1,7 +1,7 @@
-.side-bar {
+.side-bar-left {
   @include box-prop (180px, 100vh, oldlace);
   float: left;
-  .side-bar__appri-name {
+  &__appri-name {
     height: 120px;
     background-color: skyblue;
     border-radius: 40px;
@@ -42,4 +42,8 @@
       @extend .user-name;
     }
   }
+}
+.side-bar-right {
+  @include box-prop (180px, 100vh, oldlace);
+  float: right;
 }
