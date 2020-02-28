@@ -49,6 +49,7 @@
       box-shadow:  0 -10px 10px  rgba(rgb(14, 88, 185),0.2)inset;
       margin: 0 auto;
       display: flex;
+      justify-content: space-between;
       margin-top: 30px;
       .picture-image {
         @include box-prop (400px, 300px, none);

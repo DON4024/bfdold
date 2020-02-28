@@ -12,7 +12,7 @@
         .right-items__image
           image1
         .right-items__nickname
-          name1
+          = @pictures.name
       .center-items
         .center-items__image
           image2
@@ -26,50 +26,22 @@
 
 
   .app-main__body
-    .app-main__body__group
-      .picture-image
-        image1
-      .review-group
-        .picture-name
-          name1
-        .review-items
-          .review-items__icons
-            .review-items__icons__left
-            .review-items__icons__center
-            .review-items__icons__right
-          .review-items__comments
-            .comments-box
-              コメントをどうぞ
-            -# = form_for
-  .app-main__body
-    .app-main__body__group
-      .picture-image
-        image1
-      .review-group
-        .picture-name
-          name1
-        .review-items
-          .review-items__icons
-            .review-items__icons__left
-            .review-items__icons__center
-            .review-items__icons__right
-          .review-items__comments
-            .comments-box
-              コメントをどうぞ
-            -# = form_for
-  .app-main__body
-    .app-main__body__group
-      .picture-image
-        image1
-      .review-group
-        .picture-name
-          name1
-        .review-items
-          .review-items__icons
-            .review-items__icons__left
-            .review-items__icons__center
-            .review-items__icons__right
-          .review-items__comments
-            .comments-box
-              コメントをどうぞ
-            -# = form_for
+    - @pictures.each do |picture|
+      .app-main__body__group
+        .picture-image
+          = picture.image
+          .review-group
+            .picture-name
+              name1
+            .review-items
+              .review-items__icons
+                .review-items__icons__left
+                .review-items__icons__center
+                .review-items__icons__right
+              .review-items__comments
+                .comments-box
+                  コメントをどうぞ
+                -# = form_for
+
+
+
